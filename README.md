@@ -12,7 +12,7 @@ In this project, we have implemented a lexer that can tokenize basic programming
 
 ## Steps Followed to Build the Lexer
 
-### 1. **Define Token Types**
+### 1. Define Token Types
 
     We started by defining the types of tokens that the lexer will recognize. This includes:
     - Keywords (`if`, `else`, `for`, `return`, etc.)
