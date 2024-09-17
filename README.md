@@ -12,42 +12,37 @@ In this project, we have implemented a lexer that can tokenize basic programming
 
 ## Steps Followed to Build the Lexer
 
-### 1. Define Token Types
+### 1. **Define Token Types**
 
-    We started by defining the types of tokens that the lexer will recognize. This includes:
-    - Keywords (`if`, `else`, `for`, `return`, etc.)
-    - Operators (`+`, `-`, `*`, `/`, `=`, `!=`, `==`)
-    - Delimiters (`;`, `,`, `(`, `)`, `{`, `}`)
-    - Identifiers (user-defined names for variables and functions)
-    - Literals (integers)
+We started by defining the types of tokens that the lexer will recognize. This includes: - Keywords (`if`, `else`, `for`, `return`, etc.) - Operators (`+`, `-`, `*`, `/`, `=`, `!=`, `==`) - Delimiters (`;`, `,`, `(`, `)`, `{`, `}`) - Identifiers (user-defined names for variables and functions) - Literals (integers)
 
 ### 2. **Create the `Token` Struct**
 
-    The `Token` struct has two fields: `Typ` (the token type) and `Literal` (the value of the token, such as the number or keyword).
+The `Token` struct has two fields: `Typ` (the token type) and `Literal` (the value of the token, such as the number or keyword).
 
 ### 3. **Define a Lexer Structure**
 
-    The lexer keeps track of the input string and the position within it. It reads one character at a time and converts them into tokens based on the rules we defined.
+The lexer keeps track of the input string and the position within it. It reads one character at a time and converts them into tokens based on the rules we defined.
 
 ### 4. **Initialize Keywords**
 
-    We created a keyword map to differentiate between identifiers and keywords. If a token matches one of the keywords, it is classified as such. Otherwise, it is treated as an identifier.
+We created a keyword map to differentiate between identifiers and keywords. If a token matches one of the keywords, it is classified as such. Otherwise, it is treated as an identifier.
 
 ### 5. **Implement the Lexer**
 
-    The lexer reads the input character by character using the `nextChar` method. Based on the current character, it matches the token type (keyword, operator, delimiter, etc.) and moves to the next character to continue the process.
+The lexer reads the input character by character using the `nextChar` method. Based on the current character, it matches the token type (keyword, operator, delimiter, etc.) and moves to the next character to continue the process.
 
 ### 6. **Handle Special Cases**
 
-    Special cases, such as multi-character operators (`==`, `!=`), are handled by looking ahead with the `peekChar` method. The lexer checks the next character before deciding which token type to assign.
+Special cases, such as multi-character operators (`==`, `!=`), are handled by looking ahead with the `peekChar` method. The lexer checks the next character before deciding which token type to assign.
 
 ### 7. **Whitespace Handling**
 
-    We implemented a method `skipWhiteSpaces` to ignore spaces, tabs, and newlines between tokens, ensuring that tokens are not affected by unnecessary whitespace.
+We implemented a method `skipWhiteSpaces` to ignore spaces, tabs, and newlines between tokens, ensuring that tokens are not affected by unnecessary whitespace.
 
 ### 8. **EOF Handling**
 
-    The lexer properly detects the end of the input (EOF) and returns an `EOF` token to indicate that there are no more tokens to process.
+The lexer properly detects the end of the input (EOF) and returns an `EOF` token to indicate that there are no more tokens to process.
 
 ---
 
