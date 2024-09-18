@@ -21,6 +21,7 @@ func main() {
 		fmt.Printf("%+v \n", tok)
 	}
 }
+
 func readFileContent() (string, error) {
 	cwd, err := os.Getwd()
 	if err != nil {
