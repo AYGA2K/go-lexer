@@ -166,9 +166,3 @@ To run the lexer:
    ```
 
 3. Modify the `input` string in `main.go` inside the code directory with your test code to see how the lexer tokenizes it.
-
----
-
-## Conclusion
-
-This project demonstrates how to implement a simple lexer from scratch in Go. By following the steps above, we've created a tool that can tokenize basic programming constructs and lay the foundation for a full parser or interpreter. This lexer can be extended further to support more complex syntax and language features.
