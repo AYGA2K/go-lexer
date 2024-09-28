@@ -32,7 +32,7 @@ In this project, we have implemented a lexer that can tokenize basic programming
 
 ### 1. **Define Token Types**
 
-We started by defining the types of tokens that the lexer will recognize. This includes: - Keywords (`if`, `else`, `for`, `return`, etc.) - Operators (`+`, `-`, `*`, `/`, `=`, `!=`, `==`) - Delimiters (`;`, `,`, `(`, `)`, `{`, `}`) - Identifiers (user-defined names for variables and functions) - Literals (integers)
+I started by defining the types of tokens that the lexer will recognize. This includes: - Keywords (`if`, `else`, `for`, `return`, etc.) - Operators (`+`, `-`, `*`, `/`, `=`, `!=`, `==`) - Delimiters (`;`, `,`, `(`, `)`, `{`, `}`) - Identifiers (user-defined names for variables and functions) - Literals (integers)
 
 ### 2. **Create the `Token` Struct**
 
@@ -44,7 +44,7 @@ The lexer keeps track of the input string and the position within it. It reads o
 
 ### 4. **Initialize Keywords**
 
-We created a keyword map to differentiate between identifiers and keywords. If a token matches one of the keywords, it is classified as such. Otherwise, it is treated as an identifier.
+I created a keyword map to differentiate between identifiers and keywords. If a token matches one of the keywords, it is classified as such. Otherwise, it is treated as an identifier.
 
 ### 5. **Implement the Lexer**
 
@@ -56,7 +56,7 @@ Special cases, such as multi-character operators (`==`, `!=`), are handled by lo
 
 ### 7. **Whitespace Handling**
 
-We implemented a method `skipWhiteSpaces` to ignore spaces, tabs, and newlines between tokens, ensuring that tokens are not affected by unnecessary whitespace.
+I implemented a method `skipWhiteSpaces` to ignore spaces, tabs, and newlines between tokens, ensuring that tokens are not affected by unnecessary whitespace.
 
 ### 8. **EOF Handling**
 
